@@ -1,0 +1,70 @@
+<html>
+
+    <head>
+        <title>
+            User Profile
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body{
+                margin:0;
+
+                background-image: url('https://i.pinimg.com/originals/a7/d6/c7/a7d6c70b625564a72dc0f4ad1d3d5df3.jpg');
+                background-size: cover;
+                font-family: 'Tangerine', cursive;
+            }
+            h1{
+                margin-top: 7vh;
+                font-size: 70px;
+                text-align: center;
+            }
+            #container{
+                font-size:30px;
+                font-weight: bolder;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1> HOROSCOPE DETAILS OF USER </h1>
+    <div id="container">
+        <h2> Birth details of the user </h2>
+        <div>
+
+          <% Object.entries(birth_details).map(entry => { %>
+
+            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+
+       <% }); %>
+
+        </div>
+        <h2> Complete avakahada details details of the user </h2>
+        <div>
+
+           <% Object.entries(astro_details).map(entry => { %>
+
+            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+
+       <% }); %>
+
+         </div>
+         <h2> Gem Suggestion for user </h2>
+         <div>
+
+           <% Object.entries(basic_gem_suggestion).map(entry => { %>
+
+            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+
+       <% }); %>
+           
+         </div>
+    </div>
+    </body>
+
+</html>
