@@ -12,38 +12,50 @@
     </head>
 
     <body>
-        <h1> HOROSCOPE DETAILS OF USER </h1>
-    <div id="container">
-        <h2> Birth details of the user </h2>
-        <div>
+        <h1 class="gradient-text"> HOROSCOPE DETAILS OF USER </h1>
+        <div id="container">
+           <div class="wrapper">
+                <div class="box box1">
+                    <img src="https://digitshack.com/codepen/mentor3/icon-sedans.svg" alt="">
+                    <h2 class="gradient-text"> Birth details  </h2>
+                    <p>
 
-          <% Object.entries(birth_details).map(entry => { %>
+                    <% Object.entries(birth_details).map(entry => { %>
 
-            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+                        <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
 
-       <% }); %>
+                    <% }); %>
 
-        </div>
-        <h2> Complete avakahada details details of the user </h2>
-        <div>
+                    </p>
+                </div>
 
-           <% Object.entries(astro_details).map(entry => { %>
+                <div class="box box2">
+                    <img src="https://digitshack.com/codepen/mentor3/icon-suvs.svg" alt="">
+                        <h2 class="gradient-text">avakahada details  </h2>
+                        <p>
 
-            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+                           <% Object.entries(astro_details).map(entry => { %>
 
-       <% }); %>
+                           <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
 
-         </div>
-         <h2> Gem Suggestion for user </h2>
-         <div>
+                            <% }); %>
 
-           <% Object.entries(basic_gem_suggestion).map(entry => { %>
+                        </p>
+                </div>
+                <div class="box box3">
+                    <img src="https://digitshack.com/codepen/mentor3/icon-luxury.svg" alt="">
+                        <h2 class="gradient-text"> Gem Suggestion </h2>
+                        <p>
 
-            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+                            <% Object.entries(basic_gem_suggestion).map(entry => { %>
 
-       <% }); %>
-           
-         </div>
+                            <p> <%= entry[0] %>  : <%= entry[1] %> </p> 
+
+                            <% }); %>
+                
+                        </p>
+                </div>
+    </div>
     </div>
     </body>
 
